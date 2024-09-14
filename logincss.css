@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  height: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(30, 30, 188), rgba(227, 9, 9, 0.875));
+}
+.container {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+.loginbox {
+  position: relative;
+  background-color: rgba(0, 0, 0, 7);
+  box-shadow: 20px 15px 25px rgba(0, 0, 0, 5);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 20px;
+  color: white;
+  padding: 0px;
+  text-transform: uppercase;
+  text-shadow: 0px -2px blue, 2px 0 blue, 0px 2px blue, -2px 0 blue;
+  position: relative;
+}
+.user-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #fff;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(249, 249, 249);
+  outline: none;
+}
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+  transition: 0.7s;
+}
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  color: orangered;
+  font-size: 12px;
+}
+button {
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  background: orangered;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 0.7s;
+  position: relative;
+}
+button span {
+  position: absolute;
+  display: block;
+}
+button span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(transparent, white);
+  animation: btn-anim1 1.5s linear infinite;
+}
+@keyframes btn-anim1 {
+  0% {
+    left: -100px;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -50%;
+  }
+}
+button span:nth-child(2) {
+  top: 0px;
+  right: 0px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(transparent, white);
+  animation: btn-anim2 1.5s linear infinite;
+  transition-delay: 0.5s;
+}
+@keyframes btn-anim2 {
+  0% {
+    top: -100px;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: -50%;
+  }
+}
+button span:nth-child(3) {
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(transparent, white);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes btn-anim3 {
+  0% {
+    right: -100px;
+  }
+  50% {
+    right: 100%;
+  }
+  100% {
+    right: -50%;
+  }
+}
+button span:nth-child(4) {
+  bottom: 0px;
+  left: 0px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(transparent, white);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 0.1s;
+}
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100px;
+  }
+  50% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: -50%;
+  }
+}
+button:hover {
+  background: blue;
+  color: #fff;
+  opacity: 0.7;
+}
+.error {
+  color: red;
+  font-size: 15px;
+  opacity: 0.8;
+}
